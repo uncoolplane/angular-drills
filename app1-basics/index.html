@@ -1,9 +1,51 @@
-<html>
-	<body>
-	
-		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.3/angular.js"></script>
-		<script src="app.js"></script>
-		<script src="controller.js"></script>
-		<script src="service.js"></script>
-	</body>
+<html ng-app="basic">
+
+<head>
+	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/ng-grid/2.0.11/ng-grid.min.css">
+	<title>Module 1 - Angular (Basics)</title>
+</head>
+
+<body ng-controller="mainCtrl">
+	<div class="container">
+	<h1>Module 1 - Angular</h1>
+
+	<h3>2 Way Binding</h3>
+	<input type="text" name="name" ng-model="name">{{name}}
+
+	<h3>ng-repeat</h3>
+	<div class="" ng-repeat="user in users">
+		{{user}}
+	</div>
+
+	<h3>Data Stored in Service w/ filter</h3>
+	<input type="text" name="animalsearch" ng-model="animalsearch"><br>
+	<div class="" ng-repeat="animal in animals | filter: animalsearch">
+		{{animal}}
+	</div>
+
+	<h4>App Hitting API for Data</h4>
+	<input type="text" name="shipsearch" ng-model="shipsearch"><br>
+	<ul>
+		<li ng-repeat="ship in ships | filter: {'name':shipsearch} | orderBy:'name'">{{ship.name}}</li>
+	</ul>
+
+
+	<h4>API Connected to Grid</h4>
+	<div class="panel panel-default">
+     <div class="gridStyle" ng-grid="gridOptions" swap-image="defaultInfo.search"></div>
+    </div>
+
+	</div>
+
+	<script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+		 <script src = "https://ajax.googleapis.com/ajax/libs/angularjs/1.4.3/angular.js" >
+	</script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/ng-grid/2.0.11/ng-grid.min.js"></script>
+	<script src="app.js"></script>
+	<script src="controller.js"></script>
+	<script src="service.js"></script>
+</body>
+
 </html>

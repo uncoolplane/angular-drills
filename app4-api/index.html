@@ -1,9 +1,30 @@
-<html ng-app="apiApp">
-	<body>
-		
-				<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.3/angular.min.js"></script>
-		<script src="app.js"></script>
-		<script src="controller.js"></script>
-		<script src="service.js"></script>
-	</body>
+<html ng-app="api">
+
+<head>
+	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/ng-grid/2.0.11/ng-grid.min.css">
+		<link rel="stylesheet" href="style.css">
+	<title>Module 4 - Angular (API)</title>
+</head>
+
+<body ng-controller="mainCtrl">
+	<div class="container">
+	<h1>Module 4 - Angular (API)</h1>
+
+		<div class="panel panel-default">
+     <div class="gridStyle" ng-grid="gridOptions" swap-image="defaultInfo.search" class="grid" style="height: {{gridOptions.data.length*100}}px" ui-grid-cellNav ui-grid-auto-resize ui-grid-edit></div>
+    </div>
+
+	</div>
+
+	<script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+		 <script src = "https://ajax.googleapis.com/ajax/libs/angularjs/1.4.3/angular.js" >
+	</script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/ng-grid/2.0.11/ng-grid.min.js"></script>
+	<script src="app.js"></script>
+	<script src="controller.js"></script>
+	<script src="service.js"></script>
+</body>
+
 </html>
